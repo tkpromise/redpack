@@ -183,8 +183,12 @@ def xml_json(xmlstr):
 
 
 def p12_to_pem(certname, pwd='10023384'):
+    print('20200106:certname', certname)
     pem_name = certname + ".pem"
+    print('20200106:pem_name', pem_name)
     f_pem = open(pem_name, 'wb')
+    # //20200106
+    # p12file = certname + ".pem"
     p12file = certname + ".p12"
     p12 = OpenSSL.crypto.load_pkcs12(open(p12file, 'rb').read(), pwd)
     f_pem.write(OpenSSL.crypto.dump_privatekey(OpenSSL.crypto.FILETYPE_PEM, p12.get_privatekey()))
@@ -202,3 +206,4 @@ def getUUID(namespace='redpack', name='recode'):
 
 
 
+    # p12file = certname + ".p12"
