@@ -4,7 +4,7 @@ Cheetah==2.4.4
 cloud-init==0.7.6
 configobj==5.0.6
 idna==2.8
-Jinja2==2.10
+Jinja2==2.11.3
 jsonpatch==1.23
 jsonpointer==2.0
 Markdown==3.0.1
